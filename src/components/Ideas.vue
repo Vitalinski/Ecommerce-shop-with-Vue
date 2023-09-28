@@ -36,9 +36,7 @@ link : '',
     margin-bottom: 60px;
 
 }
-.information-block{
-    background-color: red;
-}
+
 .information-img{
     height: 100%;
     

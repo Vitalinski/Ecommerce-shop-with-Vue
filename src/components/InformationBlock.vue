@@ -31,7 +31,7 @@ props:{
     },
     colorTitle:{
         type:String,
-        default: '#22202E',
+        default: 'var(--black)',
         
     },
     colorDescription:{
@@ -66,7 +66,7 @@ props:{
         flex-direction: column;
         justify-content: space-between;
 &__title{
-    font-family: Clash Display;
+    font-family: var(--clash);
     font-size: 32px;
     line-height: 1.5;
     margin: 0 0 20px 0;
@@ -74,13 +74,7 @@ props:{
 &__description{
     
 }
-        &-link{
-            color:#2a254b;
-            text-decoration: none;
-        }
-        &-link:hover{
-            text-decoration: underline;
-        }
+     
     }
 
 

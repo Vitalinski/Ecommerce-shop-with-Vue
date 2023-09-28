@@ -1,9 +1,9 @@
 <template>
   <div class="product">
-    <a href="#">
+    <router-link to="/">
         <img class="product-image" :src="img" :alt="title">
-    </a>
-    <a href="#" class="product-name">{{ title }}</a>
+    </router-link>
+    <router-link to="/" class="product-name">{{ title }}</router-link>
     <span class="product-price"> {{ price }}</span>
   </div>
 </template>
@@ -38,7 +38,7 @@ display: block;
 color: #2A254B;
 font-size: 20px;
 line-height: 28px;
-font-family: Clash Display;
+font-family: var(--clash);
 margin-bottom: 8px;
 
 

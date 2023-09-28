@@ -48,7 +48,7 @@ const aboutBrands=[{
 text-align: center;
 font-size: 24px;
 color: #2A254B;
-font-family: Clash Display;
+font-family: 'var(--clash)';
 margin-bottom: 36px;
     }
     &-elements{
@@ -69,7 +69,7 @@ gap: 20px;
             margin: 0 0 12px  0;
             color: #2A254B;
             font-size: 20px;
-            font-family: Clash Display;
+            font-family: 'var(--clash)';
         }
         &__description{
             line-height: 1.5;

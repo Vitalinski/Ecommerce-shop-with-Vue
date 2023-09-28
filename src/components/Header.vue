@@ -5,27 +5,27 @@
   <img src="public/svg/header-search.svg" alt="Search">
 </div>
 <div>
-  <a  class="header-logo" href="#">Avion</a>
+  <router-link class="header-logo" to="/">Avion</router-link>
 </div>
 
 <div class="header-top-right">
 <div class="header-top-right__cart">
-  <a href="#">
+  <router-link to="/">
     <img src="public/svg/header-shopping--cart.svg" alt="Shopping cart">
-  </a>
+  </router-link>
 </div>
 <div class="header-top-right__user">
-  <a href="#">
+  <router-link to="/">
     <img src="public/svg/header-user--avatar.svg" alt="Shopping cart">
-  </a>
+  </router-link>
 </div>
 </div>
     </div>
     <div class="header-menu">
-      <a class="header-menu__link"
-      :href="element.path"
+      <router-link class="header-menu__link"
+       to="/"
       v-for="(element, i) of menu"
-      :key="i">{{ element.name }}</a>
+      :key="i">{{ element.name }}</router-link>
     </div>
   </header>
 </template>
@@ -88,7 +88,7 @@ const menu = [
     text-decoration: none;
     font-size: 24px;
     font-weight: bold;
-    color: #22202E;
+    color: var(--black);
   }
   &-logo:hover{
     text-decoration: underline;
