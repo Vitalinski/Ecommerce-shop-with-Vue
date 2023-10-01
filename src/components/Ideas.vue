@@ -2,7 +2,8 @@
 <div class="ideas">
  
       <InformationBlock class="information-block" :title="title" :description="description" :link="link"
-       btnBackground="#F9F9F926" background="#2A254B" btnColor="white"
+       btnBackground="#F9F9F926" background="var(--primary)
+" btnColor="white"
        colorTitle="white"  colorDescription="white"></InformationBlock>
        <img class="information-img" src="public/img/idea-image.jpg" alt="Image">
 </div>
@@ -26,7 +27,7 @@ link : '',
 }
 </script>
 
-<style>
+<style scoped>
 .ideas{
     display: grid;
     grid-template-columns: repeat(2,1fr);

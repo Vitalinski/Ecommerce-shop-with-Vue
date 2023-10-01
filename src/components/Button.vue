@@ -1,5 +1,5 @@
 <template>
-  <button :style="{color:color, background:background}" class="btn">View collection</button> 
+  <button :style="{color:color, background:background}" class="btn">{{ text }}</button> 
 
 </template>
 
@@ -7,6 +7,11 @@
 export default {
  
 props:{
+    text:{
+        type:String,
+        default:'View collection'
+    },
+  
     color:{
         type:String,
         default:'#2A254B'

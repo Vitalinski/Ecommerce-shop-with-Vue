@@ -108,4 +108,8 @@ const menu = [
     }
   }
 }
+img:hover{
+  cursor: pointer;
+scale: 1.3;  }
+  
 </style>

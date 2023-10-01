@@ -35,7 +35,7 @@ export default {
   }  
   &-name{
 display: block;
-color: #2A254B;
+color: var(--primary);
 font-size: 20px;
 line-height: 28px;
 font-family: var(--clash);
@@ -45,7 +45,7 @@ margin-bottom: 8px;
   }
   &-price{
     display: block;
-    color: #2A254B;
+    color: var(--primary);
     font-size: 18px;
 
   }
