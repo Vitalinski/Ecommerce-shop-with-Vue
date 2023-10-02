@@ -32,35 +32,57 @@ import SubscribeForm from './SubscribeForm.vue';
 background: url(public/img/background-subscribe-image.jpg);
 background-size: cover;
 padding:96px 0 86px 0 ;
+@media screen and (max-width: 768px) {
+       padding: 0;
+       background-position: 700px ;
+
+}
 &-content{
     max-width: 494px;
     margin: auto;
     text-align: center; 
     color: white;
-
+    @media screen and (max-width: 768px) {
+        text-align: left;
+        padding: 24px;
+}
 }
 &-title{
    display: block;
    margin: 0 0 12px 0 ;
    font-size: 32px;
    font-family: var(--clash);
+   @media screen and (max-width: 768px) {
+      font-size: 24px;
+}
 }
 &-description{
 font-size: 18px;
 display: block;
 margin-bottom: 30px;
+@media screen and (max-width: 768px) {
+      font-size: 14px;
+}
 }
 &-benefits{
     display: flex;
     justify-content: center;
     margin-bottom: 40px;
+@media screen and (max-width: 768px) {
+    display: block;
 
+}
 }
 &-benefit{
     display: flex;
     align-items: center;
+     
+
     &:nth-child(2){
         margin: 0 36px;
+        @media screen and (max-width: 768px) {
+     margin: 8px 0 ;
+}
     }
     &__icon{
 margin-right: 9px;

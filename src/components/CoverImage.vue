@@ -1,8 +1,9 @@
 <template>
   <div class="cover-image">
     <InformationBlock :title="title" :description="description" :link="link"></InformationBlock>
-
 </div>
+<img class="mobile-image" src="public/img/hero.jpg" alt="Image">
+
 </template>
 
 <script setup>
@@ -23,6 +24,22 @@ const link = ''
     justify-content: flex-end;
     padding-right: 80px;
 
-   
+   @media screen and (max-width: 768px) {
+    height: auto;
+    background: transparent;
+
+    padding: 0px 24px 32px 24px ;
+    
+
+   }
+}
+.mobile-image{
+height: 60vw;
+
+  @media screen and (min-width: 769px) {
+display: none;
+    
+
+   }
 }
 </style>

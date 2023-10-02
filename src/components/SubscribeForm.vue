@@ -33,6 +33,7 @@ type:String,
         padding-left:  17px;
 height: 56px;
 flex-grow: 1;
+min-width: 150px;
     }
 }
 </style>

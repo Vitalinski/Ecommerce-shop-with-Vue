@@ -75,12 +75,30 @@ import SubscribeForm from '../SubscribeForm.vue';
     color: white;
     &-content{
         padding: 50px 82px 25px 82px;
+        @media screen and (max-width: 1024px) {
+      padding: 50px 30px 25px 30px;
+    
+    }
     }
     &-menu{
+      
       display: grid;
       grid-template-columns: 540px 1fr;
       column-gap: 110px;
       border-bottom: 1px solid #4E4D93;
+      @media screen and (max-width: 1200px) {
+      column-gap: 10px;
+      grid-template-columns: 460px 1fr;
+    }
+    @media screen and (max-width: 1024px) {
+      column-gap: 10px;
+      grid-template-columns: 350px 1fr;
+    }
+    @media screen and (max-width: 768px) {
+      grid-template-columns: 1fr;
+      padding-bottom: 16px;
+    }
+  
     }
     &-columns{
       display: grid;
@@ -88,6 +106,7 @@ import SubscribeForm from '../SubscribeForm.vue';
       margin-bottom: 80px;
       &__title{
         display: block;
+        font-size: 20px;
         margin-bottom: 12px;
   
       }
@@ -105,8 +124,15 @@ text-decoration: underline;
         }
 
       }
+
+      @media screen and (max-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr) ;
+      row-gap:30px;
+    }
     }
     &-subscribe__text{
+      font-size: 20px;
+
       margin-bottom: 16px;
     }
     &-social{
@@ -115,10 +141,15 @@ text-decoration: underline;
       justify-content: space-between;
       &-copyright{
         font-size: 14px;
+        @media screen and (max-width: 768px) {
+margin: auto;    }
       }
       &-logos{
         display: flex;
         align-items: center;
+        @media screen and (max-width: 768px) {
+    display: none;
+    }
 &__link{
   margin: 0 12px;
   &:hover{

@@ -5,8 +5,10 @@
           <Product v-for="(product,i) of products" :key="i"
           :img="product.img" :title="product.title" :price="product.price"
           ></Product>
+          
      </div>
      <Button class="products-btn"></Button>
+
     </div>
 </template>
 
@@ -41,17 +43,30 @@ price:'£399'
 
 <style lang="scss" scoped>
 .products{
-    display: flex;
-    column-gap: 20px;
-    padding: 0 80px;
+    display: grid;
+        grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
     margin-bottom: 64px;
     &-container{
+        padding: 0 80px;
+
         margin-bottom: 56px;
+        @media screen and (max-width: 768px) {
+    padding: 0 24px;
+
+
+}
     }
     &-btn{
         margin: 0 auto;
     }
-   
+    @media screen and (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+
+
+}
+
 }
 
 </style>

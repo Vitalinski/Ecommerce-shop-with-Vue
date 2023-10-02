@@ -50,17 +50,31 @@ font-size: 24px;
 color: #2A254B;
 font-family: 'var(--clash)';
 margin-bottom: 36px;
+@media screen and (max-width: 768px) {
+    text-align: left;
+font-size: 20px;
+
+}
     }
     &-elements{
         display: grid;
         grid-template-columns: repeat(4, 1fr);
 gap: 20px;
+@media screen and (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
 
+}
+@media screen and (max-width: 768px) {
+    grid-template-columns: repeat(1, 1fr);
+
+}
     }
     &-element{
         padding: 48px;
         background-color: #F9F9F9;
-
+        @media screen and (max-width: 768px) {
+padding: 36px 24px;
+}
         &__img{
             display: block;
             margin-bottom: 12px;
@@ -75,6 +89,12 @@ gap: 20px;
             line-height: 1.5;
         }
     }
+
+    @media screen and (max-width: 768px) {
+    padding: 24px ;
+
+
+}
 
 }
 </style>

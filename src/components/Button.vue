@@ -1,5 +1,5 @@
 <template>
-  <button :style="{color:color, background:background}" class="btn">{{ text }}</button> 
+  <button :class="{'mobile-width':mobileWidth}" :style="{color:color, background:background}" class="btn">{{ text }}</button> 
 
 </template>
 
@@ -7,6 +7,10 @@
 export default {
  
 props:{
+    mobileWidth:{
+        type:Boolean,
+        default:false
+    },
     text:{
         type:String,
         default:'View collection'
@@ -24,6 +28,7 @@ props:{
 
 <style lang="scss" scoped>
  .btn{
+    white-space: nowrap;
         display: block;
         line-height: 24px;
         border: none;
@@ -31,5 +36,10 @@ props:{
         &:hover{
             outline: 1px solid grey;
         }
+      
+    }
+    .mobile-width{
+        min-width: 100%;
+
     }
 </style>

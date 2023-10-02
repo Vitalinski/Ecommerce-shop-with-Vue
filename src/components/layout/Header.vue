@@ -1,8 +1,14 @@
 <template>
   <header class="header">
     <div class="header-top">
-<div class="header-top-search">
-  <img src="public/svg/header-search.svg" alt="Search">
+
+<div class="header-top-mobile">
+  <div class="header-top-search">
+    <img src="public/svg/header-search.svg" alt="Search">
+  </div>
+  <div class="header-top-mobile-menu">
+    <img src="public/svg/menu.svg" alt="Menu">
+  </div>
 </div>
 <div>
   <router-link class="header-logo" to="/">Avion</router-link>
@@ -31,7 +37,6 @@
 </template>
 
 <script setup>
-import{ref} from "vue"
 const menu = [
   {
     name:'Plant pots',
@@ -76,19 +81,46 @@ const menu = [
     align-items: center;
     border-bottom: 1px solid rgba(0, 0, 0, .1);
     margin: 0 28px;
+    @media screen and (max-width: 768px) {
+      display: flex;
+    border: none;
+    }
     &-right{
       display: flex;
       justify-content: flex-end;
+      @media screen and (max-width: 768px) {
+    display: none;
+    }
       &__cart{
         margin-right: 16px;
       }
     }
+    &-search{
+
   }
+
+  &-mobile{
+    @media screen and (max-width: 768px) {
+      display: flex;           
+order: 2;    
+}
+  }
+  &-mobile-menu{
+    display: none;
+    @media screen and (max-width: 768px) {
+      display: block;
+      margin-left: 20px;
+    }
+  }
+    }
+  
   &-logo{
     text-decoration: none;
     font-size: 24px;
     font-weight: bold;
     color: var(--black);
+    @media screen and (max-width: 768px) {
+order: 1;    }
   }
   &-logo:hover{
     text-decoration: underline;
@@ -98,6 +130,9 @@ const menu = [
     display: flex;
     justify-content: center;
     align-items: center;
+    @media screen and (max-width: 768px) {
+    display: none;
+    }
     &__link{
       text-decoration: none;
       margin: 0 23px;
@@ -106,6 +141,7 @@ const menu = [
     &__link:hover{
       text-decoration: underline;
     }
+   
   }
 }
 img:hover{

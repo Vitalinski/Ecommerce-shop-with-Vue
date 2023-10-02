@@ -65,6 +65,11 @@ props:{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        @media screen and (max-width: 768px) {
+            min-height: 0;
+
+       padding: 0;     
+   }
 &__title{
     font-family: var(--clash);
     font-size: 32px;
@@ -72,7 +77,10 @@ props:{
     margin: 0 0 20px 0;
 }
 &__description{
-    
+    @media screen and (max-width: 768px) {
+        display: block;
+         margin-bottom: 32px;   
+   }
 }
      
     }

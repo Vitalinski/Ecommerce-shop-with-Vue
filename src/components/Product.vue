@@ -32,6 +32,7 @@ export default {
   &-image{
    display: block;
    margin-bottom: 24px;
+
   }  
   &-name{
 display: block;

@@ -27,19 +27,36 @@ link : '',
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .ideas{
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    height: 478px;
     column-gap: 16px;
     padding: 0 80px;
     margin-bottom: 60px;
+@media screen and (max-width:668px){
+    grid-template-columns: repeat(1,1fr);
+    padding: 0 24px;
 
+    
 }
+}
+.information-block{
+    @media screen and (max-width:768px){
+padding:32px;
+    margin-bottom: 24px;
+    height: 70vw;
+    min-height: 350px;
+    max-height: 500px;
 
+
+} 
+}
 .information-img{
-    height: 100%;
+    height: 70vw;
+    min-height: 350px;
+    max-height: 500px;
+    object-fit: cover;
     
 }
 </style>
