@@ -6,8 +6,8 @@
   <div class="header-top-search">
     <img src="public/svg/header-search.svg" alt="Search">
   </div>
-  <div class="header-top-mobile-menu">
-    <img src="public/svg/menu.svg" alt="Menu">
+  <div class="header-top-mobile-menu" @click="openMenu = !openMenu">
+    <img src="public/svg/menu.svg" alt="Menu" >
   </div>
 </div>
 <div>
@@ -29,14 +29,21 @@
     </div>
     <div class="header-menu">
       <router-link class="header-menu__link"
-       to="/"
       v-for="(element, i) of menu"
+       :to="element.path"
+      :key="i">{{ element.name }}</router-link>
+    </div>
+    <div class="header-menu-mobile" v-if="openMenu">
+      <router-link class="header-menu-mobile__link"
+      v-for="(element, i) of menu"
+       :to="element.path"
       :key="i">{{ element.name }}</router-link>
     </div>
   </header>
 </template>
 
 <script setup>
+import { ref } from 'vue';
 const menu = [
   {
     name:'Plant pots',
@@ -67,10 +74,12 @@ const menu = [
     path:'/cutlery'
   }
 ]
+let openMenu = ref(false)
 </script>
 
 <style lang="scss" scoped>
 .header{
+  position: relative;
   height: 132px;
   background: #fff;
   &-top{
@@ -141,7 +150,30 @@ order: 1;    }
     &__link:hover{
       text-decoration: underline;
     }
-   
+   &-mobile{
+    border: 1px solid grey;
+    position: absolute;
+    top: 48px;
+    right: 10px;
+    @media screen and (min-width: 769px) {
+    display: none;
+    }
+    &__link{
+      border: 1px solid grey;
+      display: block;
+      color: black;
+      padding: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      background-color: #d3bfa9;
+      transition: all 0.5s ease;
+      &:hover{
+        background-color: white;
+        transition: all 0.5s ease;
+
+      }
+    }
+   }
   }
 }
 img:hover{
