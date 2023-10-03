@@ -165,10 +165,10 @@ order: 1;    }
       padding: 10px;
       text-decoration: none;
       font-weight: bold;
-      background-color: #d3bfa9;
+      background-color: white;
       transition: all 0.5s ease;
       &:hover{
-        background-color: white;
+        background-color: lightgrey;
         transition: all 0.5s ease;
 
       }
