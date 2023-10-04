@@ -41,22 +41,22 @@
         <span class="footer-social-copyright">Copyright 2022 Avion LTD</span>
         <div class="footer-social-logos">
           <a href="#" class="footer-social-logos__link">
-            <img src="public/svg/logo-facebook.svg" alt="Meta">
+            <img src="/svg/logo-facebook.svg" alt="Meta">
           </a>
           <a href="#" class="footer-social-logos__link">
-            <img src="public/svg/logo-instagram.svg" alt="Instagram">
+            <img src="/svg/logo-instagram.svg" alt="Instagram">
           </a>
           <a href="#" class="footer-social-logos__link">
-            <img src="public/svg/logo-linkedin.svg" alt="Linkedin">
+            <img src="/svg/logo-linkedin.svg" alt="Linkedin">
           </a>
           <a href="#" class="footer-social-logos__link">
-            <img src="public/svg/logo-pinterest.svg" alt="Pinterest">
+            <img src="/svg/logo-pinterest.svg" alt="Pinterest">
           </a>
           <a href="#" class="footer-social-logos__link">
-            <img src="public/svg/logo-skype.svg" alt="Skype">
+            <img src="/svg/logo-skype.svg" alt="Skype">
           </a>
           <a href="#" class="footer-social-logos__link">
-            <img src="public/svg/logo-twitter.svg" alt="Twitter">
+            <img src="/svg/logo-twitter.svg" alt="Twitter">
           </a>
         </div>
       </div>

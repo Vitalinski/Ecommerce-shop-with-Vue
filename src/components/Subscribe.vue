@@ -5,15 +5,15 @@
 <span class="subscribe-description">Sign up for our newsletter and receive exclusive offers on new ranges, sales, pop up stores and more</span>
 <div class="subscribe-benefits">
     <div class="subscribe-benefit">
-    <img  class="subscribe-benefit__icon" src="public/img/subscribe-check.jpg" >
+    <img  class="subscribe-benefit__icon" src="/img/subscribe-check.jpg" >
     <span class="subscribe-benefit__name" >Exclusive offers</span>
 </div>
 <div class="subscribe-benefit">
-    <img  class="subscribe-benefit__icon" src="public/img/subscribe-check.jpg" >
+    <img  class="subscribe-benefit__icon" src="/img/subscribe-check.jpg" >
     <span class="subscribe-benefit__name" >Free events</span>
 </div>
 <div class="subscribe-benefit">
-    <img  class="subscribe-benefit__icon" src="public/img/subscribe-check.jpg" >
+    <img  class="subscribe-benefit__icon" src="/img/subscribe-check.jpg" >
     <span class="subscribe-benefit__name" >Large discounts</span>
 </div>
 </div>
@@ -29,7 +29,7 @@ import SubscribeForm from './SubscribeForm.vue';
 </script>
 <style lang="scss" scoped>
 .subscribe{
-background: url(public/img/background-subscribe-image.jpg);
+background: url(/img/background-subscribe-image.jpg);
 background-size: cover;
 padding:96px 0 86px 0 ;
 @media screen and (max-width: 768px) {

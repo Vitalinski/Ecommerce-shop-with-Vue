@@ -4,10 +4,10 @@
 
 <div class="header-top-mobile">
   <div class="header-top-search">
-    <img src="public/svg/header-search.svg" alt="Search">
+    <img src="/svg/header-search.svg" alt="Search">
   </div>
   <div class="header-top-mobile-menu" @click="openMenu = !openMenu">
-    <img src="public/svg/menu.svg" alt="Menu" >
+    <img src="/svg/menu.svg" alt="Menu" >
   </div>
 </div>
 <div>
@@ -17,12 +17,12 @@
 <div class="header-top-right">
 <div class="header-top-right__cart">
   <router-link to="/">
-    <img src="public/svg/header-shopping--cart.svg" alt="Shopping cart">
+    <img src="/svg/header-shopping--cart.svg" alt="Shopping cart">
   </router-link>
 </div>
 <div class="header-top-right__user">
   <router-link to="/">
-    <img src="public/svg/header-user--avatar.svg" alt="Shopping cart">
+    <img src="/svg/header-user--avatar.svg" alt="Shopping cart">
   </router-link>
 </div>
 </div>

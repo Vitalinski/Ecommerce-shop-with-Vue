@@ -2,7 +2,7 @@
   <div class="cover-image">
     <InformationBlock :title="title" :description="description" :link="link"></InformationBlock>
 </div>
-<img class="mobile-image" src="public/img/hero.jpg" alt="Image">
+<img class="mobile-image" src="/img/hero.jpg" alt="Image">
 
 </template>
 
@@ -16,7 +16,7 @@ const link = ''
 
 <style lang="scss" scoped>
 .cover-image{
-    background:url("public/img/hero.jpg");
+    background:url("/img/hero.jpg");
     height: 704px;
     background-size: cover;
     display: flex;

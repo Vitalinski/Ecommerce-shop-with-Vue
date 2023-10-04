@@ -5,7 +5,7 @@
        btnBackground="#F9F9F926" background="var(--primary)
 " btnColor="white"
        colorTitle="white"  colorDescription="white"></InformationBlock>
-       <img class="information-img" src="public/img/idea-image.jpg" alt="Image">
+       <img class="information-img" src="/img/idea-image.jpg" alt="Image">
 </div>
 </template>
 
