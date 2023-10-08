@@ -28,6 +28,7 @@ props:{
 
 <style lang="scss" scoped>
  .btn{
+    cursor: pointer;
     white-space: nowrap;
         display: block;
         line-height: 24px;
@@ -39,7 +40,10 @@ props:{
       
     }
     .mobile-width{
-        min-width: 100%;
+        @media screen and (max-width: 768px){
+    min-width: 100%;
+    
+  }
 
     }
 </style>

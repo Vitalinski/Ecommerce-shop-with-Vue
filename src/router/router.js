@@ -15,7 +15,19 @@ component:MainPage
         name:'ProductPage',
         component:ProductPage
             }
-]
+],
+
+  
 })
+router.beforeEach((to, from, next) => {  
+    if (to.path !== from.path && to.name !== from.name ) {
+      window.scrollTo({ top: 0 });
+    }
+    else{
+        window.scrollTo({ top: 0, behavior:'smooth' });
+
+    }
+    next();
+  });
 
 export default router

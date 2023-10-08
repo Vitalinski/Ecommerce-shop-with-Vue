@@ -1,5 +1,5 @@
 import { defineStore } from "pinia";
-export const useToDoStore = defineStore("toDoStore", {
+export const useProductsStore = defineStore("productsStore", {
 state:()=>({
      products:{
           1:{
@@ -43,6 +43,17 @@ state:()=>({
           description:"A timeless design, crafted with meticulous attention to detail and using premium materials, defines our most popular and iconic furniture pieces. These exquisite creations seamlessly blend classic elegance with modern functionality, making them a perfect addition to any living space."
         },
     },
+cart:{
 
-})
+}
+
+}),
+actions:{
+  addToCart(product, quantity){
+
+this.cart[product.id]= product
+this.cart[product.id].quantity=quantity
+
+  }
+}
 })

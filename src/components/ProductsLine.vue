@@ -1,6 +1,9 @@
 <template>
   <div class="products-container">
+      <div v-show="showLikeText" class="products-container-text">You might also like</div>
+
     <div class="products">
+
       <Product
         v-for="product of products"
         :key="product.id"
@@ -10,7 +13,7 @@
         :id="product.id"
       ></Product>
     </div>
-    <Button class="products-btn"></Button>
+    <Button mobileWidth="true" class="products-btn"></Button>
   </div>
 </template>
 
@@ -18,9 +21,14 @@
 import { ref } from "vue";
 import Product from "./Product.vue";
 import Button from "./Button.vue";
-import { useToDoStore } from "../store/store";
-
-const store = useToDoStore()
+import { useProductsStore } from "../store/store";
+const props = defineProps({
+  showLikeText:{
+    type:String,
+    default:false
+  },
+})
+const store = useProductsStore()
 const products = store.products 
 </script>
 
@@ -37,6 +45,13 @@ const products = store.products
     margin-bottom: 56px;
     @media screen and (max-width: 768px) {
       padding: 0 24px;
+    }
+    &-text{
+      font-size: 32px;
+      color:var(--primary);
+      font-family: var(--clash);
+      margin-top: 67px;
+      margin-bottom: 33px;
     }
   }
   &-btn {

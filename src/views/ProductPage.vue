@@ -1,29 +1,34 @@
 <template>
   <Header></Header>
  <ProductDetails :product="currentProduct"></ProductDetails>
+ <ProductsLine showLikeText="true"></ProductsLine>
+<AboutBrand></AboutBrand>
  <Footer></Footer>
 
 
 </template>
 
 <script setup>
-import { ref , onMounted } from 'vue';
+import { ref , watch } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
+import { useProductsStore } from "../store/store";
 import ProductDetails from '../components/ProductDetails.vue';
 import Footer from '../components/layout/Footer.vue';
 import Header from '../components/layout/Header.vue';
-import { useToDoStore } from "../store/store";
+import ProductsLine from '../components/ProductsLine.vue';
+import AboutBrand from '../components/AboutBrand.vue';
 
-const store = useToDoStore()
+const store = useProductsStore()
 const products = store.products 
 const route = useRoute();
 const router = useRouter();
-let productId = ref('')
-let currentProduct = ref({})
-onMounted(()=>{
-  productId.value= route.params.id
-  currentProduct.value = products[productId.value]
-} )
+let productId = ref(route.params.id)
+let currentProduct = ref( products[productId.value])
+function onRouteIdChange(newId) {
+  productId.value = newId;
+  currentProduct.value = products[productId.value];
+}
+watch(() => route.params.id, onRouteIdChange);
 </script>
 
 <style>

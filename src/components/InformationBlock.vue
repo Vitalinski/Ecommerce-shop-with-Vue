@@ -5,7 +5,7 @@
         <span :style="{color: colorDescription}" class="info__description">{{ description }}</span>
 </div>   
 <div >
-    <Button :color="btnColor" :background="btnBackground"></Button>
+    <Button mobileWidth="true" :color="btnColor" :background="btnBackground"></Button>
 </div>
 </div>
 </template>
