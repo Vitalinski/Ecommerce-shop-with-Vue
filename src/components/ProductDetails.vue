@@ -5,7 +5,7 @@
     </div>
     <div>
       <h2 class="product-title">{{ product.title }}</h2>
-      <div class="product-price">{{ product.price }}</div>
+      <div class="product-price">£{{ product.price }}</div>
 
       <div class="product-description">
         <div class="product-description__title">Product description</div>
@@ -41,13 +41,16 @@
         </div>
       </div>
       <Button
-      mobileWidth="true"
+        mobileWidth="true"
         @click="addProduct"
         text="Add to cart"
         background="#2A254B"
         color="#fff"
       ></Button>
-      <div v-if="alreadyAddedText">This product has already been added to your cart</div>
+      <div class="product-already" v-if="alreadyAddedText">
+        This product has already been added to your cart
+      </div>
+      <div class="product-success" v-if="productAddedText">This product added successfully</div>
     </div>
   </div>
 </template>
@@ -64,27 +67,35 @@ const props = defineProps({
   },
 });
 let quantity = ref(1);
-let alreadyAddedText = ref(false)
+let alreadyAddedText = ref(false);
+let productAddedText = ref(false);
 
-watch(()=>props.product, ()=>{
-quantity.value=1
-alreadyAddedText.value = false
-})
+watch(
+  () => props.product,
+  () => {
+    quantity.value = 1;
+    alreadyAddedText.value = false;
+    productAddedText.value = false;
+  }
+);
 function decrease() {
   if (quantity.value > 1) {
     quantity.value--;
   }
 }
-function addProduct(){
-  let currentProduct=props.product
-  if(store.cart[currentProduct.id]){ 
+function addProduct() {
+  let currentProduct = props.product;
+  if (store.cart[currentProduct.id]) {
+    productAddedText.value = false;
     alreadyAddedText.value = true
-   } 
-   else{
-    store.addToCart(currentProduct, quantity.value)}
-  quantity.value = 1 
-} 
+  } else {
+    store.addToCart(currentProduct, quantity.value);
+    productAddedText.value = true;
+    store.calculateSubtotal()
 
+  }
+  quantity.value = 1;
+}
 </script>
 
 <style lang="scss" scoped>
@@ -96,20 +107,17 @@ function addProduct(){
   align-items: center;
   grid-template-columns: 1fr 1fr;
   column-gap: 65px;
-  @media screen and (max-width: 768px){
+  @media screen and (max-width: 768px) {
     display: block;
-    
   }
   &-img {
     height: 660px;
     object-fit: cover;
-    @media screen and (max-width: 768px){
-height: auto;   
-display: block;
-margin: 0 auto 32px auto; 
-
-
-  }
+    @media screen and (max-width: 768px) {
+      height: auto;
+      display: block;
+      margin: 0 auto 32px auto;
+    }
   }
   &-title {
     margin-top: -20px;
@@ -148,9 +156,9 @@ margin: 0 auto 32px auto;
   }
   &-quantity {
     margin-bottom: 48px;
-    @media screen and (max-width: 768px){
-margin-bottom: 24px;    
-  }
+    @media screen and (max-width: 768px) {
+      margin-bottom: 24px;
+    }
     &__text {
       margin-bottom: 12px;
     }
@@ -160,10 +168,9 @@ margin-bottom: 24px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      @media screen and (max-width: 768px){
- width: 100%;
-    
-  }
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
       &-button {
         border: none;
         background-color: #fff;
@@ -177,6 +184,14 @@ margin-bottom: 24px;
         }
       }
     }
+  }
+  &-already{
+    color:red; 
+    position: absolute;
+  }
+  &-success{
+    color:green; 
+    position: absolute;
   }
 }
 </style>

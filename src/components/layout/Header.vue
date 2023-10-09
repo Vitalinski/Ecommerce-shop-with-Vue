@@ -1,12 +1,25 @@
 <template>
   <header class="header">
     <div class="header-top">
-
-<div class="header-top-mobile">
-  <div class="header-top-search">
+      <div class="header-top-search">
     <img src="/svg/header-search.svg" alt="Search">
   </div>
-  <div class="header-top-mobile-menu" @click="openMenu = !openMenu">
+<div class="header-top-mobile">
+  <div class="header-top-mobile__search">
+    <img src="/svg/header-search.svg" alt="Search">
+  </div>
+  <div class="header-top-mobile__cart">
+  <router-link to="/cart">
+    <img src="/svg/header-shopping--cart.svg" alt="Shopping cart">
+    <span v-if="Object.keys(cart).length" class="header-top-right__count">{{ Object.keys(cart).length }}</span>
+  </router-link>
+</div>
+<div class="header-top-mobile__user">
+  <router-link to="/">
+    <img src="/svg/header-user--avatar.svg" alt="Shopping cart">
+  </router-link>
+</div>
+  <div class="header-top-mobile__menu" @click="openMenu = !openMenu">
     <img src="/svg/menu.svg" alt="Menu" >
   </div>
 </div>
@@ -16,8 +29,9 @@
 
 <div class="header-top-right">
 <div class="header-top-right__cart">
-  <router-link to="/">
+  <router-link to="/cart">
     <img src="/svg/header-shopping--cart.svg" alt="Shopping cart">
+    <span v-if="Object.keys(cart).length" class="header-top-right__count">{{ Object.keys(cart).length }}</span>
   </router-link>
 </div>
 <div class="header-top-right__user">
@@ -44,6 +58,9 @@
 
 <script setup>
 import { ref } from 'vue';
+import { useProductsStore } from '../../store/store';
+const store = useProductsStore()
+const cart = store.cart
 const menu = [
   {
     name:'Plant pots',
@@ -100,27 +117,43 @@ let openMenu = ref(false)
       @media screen and (max-width: 768px) {
     display: none;
     }
+
       &__cart{
         margin-right: 16px;
+        position: relative;
+      }
+      &__count{
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 10px;
+        text-align: center;
+        background-color: yellow;
+        border-radius: 50%;
+        width: 14px;
+        height: 14px;
+        font-weight: bold;
       }
     }
     &-search{
-
+      @media screen and (max-width: 768px) {
+      display: none;
+}
   }
 
   &-mobile{
+    display: none;
     @media screen and (max-width: 768px) {
       display: flex;           
 order: 2;    
+gap: 20px;
+}
+&__cart{
+  position: relative;
 }
   }
-  &-mobile-menu{
-    display: none;
-    @media screen and (max-width: 768px) {
-      display: block;
-      margin-left: 20px;
-    }
-  }
+
     }
   
   &-logo{

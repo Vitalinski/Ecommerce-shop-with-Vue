@@ -1,9 +1,7 @@
 <template>
-  <Header></Header>
  <ProductDetails :product="currentProduct"></ProductDetails>
  <ProductsLine showLikeText="true"></ProductsLine>
 <AboutBrand></AboutBrand>
- <Footer></Footer>
 
 
 </template>

@@ -1,12 +1,10 @@
 <template>
     <div class="container">
-  <Header></Header>  
   <CoverImage></CoverImage>
   <AboutBrand></AboutBrand>
   <ProductsLine></ProductsLine>
   <Ideas></Ideas>
   <subscribe></subscribe>
-  <Footer></Footer>
   </div>
   </template>
   

@@ -4,7 +4,7 @@
         <img class="product-image" :src="img" :alt="title">
     </router-link>
     <router-link :to="`/products/${id}`" class="product-name">{{ title }}</router-link>
-    <span class="product-price"> {{ price }}</span>
+    <span class="product-price"> £{{ price }}</span>
   </div>
 </template>
 

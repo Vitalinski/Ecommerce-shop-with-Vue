@@ -18,7 +18,6 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
 import Product from "./Product.vue";
 import Button from "./Button.vue";
 import { useProductsStore } from "../store/store";
