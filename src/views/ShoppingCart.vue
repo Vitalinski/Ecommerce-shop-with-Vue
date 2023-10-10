@@ -23,6 +23,16 @@
             <router-link :to="`/products/${product.id}`" class="product-card__title">{{ product.title }}</router-link>
             <div class="product-card__description">{{ product.cartDescription }} </div>
     <div class="product-card__price">£{{ product.price }}</div>
+
+    <div class="product__mobile-counter">
+              <button class="product__counter-button" @click="changeQuantity( $event, product.id)">
+                {{ '-' }}
+              </button>
+              <span>{{ product.quantity }}</span>
+              <button class="product__counter-button" @click="changeQuantity( $event, product.id)">
+                {{ '+' }}
+              </button>
+            </div>
                 </div>
     
             </div>
@@ -75,10 +85,16 @@ function changeQuantity(e, id){
   color: var(--primary);
   background-color: #f9f9f9;
   padding: 64px 188px;
+  @media screen and (max-width: 1024px) {
+    padding: 36px 24px;
+      }
   &-title {
     font-size: 36px;
     font-family: var(--clash);
     white-space: nowrap;
+    @media screen and (max-width: 768px) {
+       font-size: 24px;
+      }
   }
   &-headers {
     display: flex;
@@ -86,6 +102,9 @@ function changeQuantity(e, id){
     font-family: var(--clash);
     font-size: 14px;
     margin-bottom: 12px;
+    @media screen and (max-width: 768px) {
+    display: none;
+      }
   }
   &-products {
     border-top: 1px #ebe8f4 solid;
@@ -117,16 +136,24 @@ margin-bottom: 16px;
     }
 }
 .product{
-    display: flex;
-    justify-content: space-between;
+ 
+    display: grid;
+    grid-template-columns:1fr 50% 50px  ;
     align-items: center;
+    @media screen and (max-width: 768px) {
+display: flex;
+flex-direction: column;
+      }
     &-card{
 display: flex;
         &__image{
 max-width: 110px;
 max-height: 130px;
-margin-right: 21px;
-margin-top: 20px;
+margin: 20px 21px 32px 0;
+@media screen and (max-width: 768px) {
+  max-width: 200px;
+max-height: 200px;
+      }
         }
         &__text{
 max-width: 180px;
@@ -138,7 +165,9 @@ font-size: 20px;
 font-family: var(--clash);
 margin-bottom: 8px;
 margin-top: 32px;
-
+@media screen and (max-width: 768px) {
+font-size: 16px;
+      }
         }
         &__description{
 font-size: 14px;
@@ -151,9 +180,9 @@ margin-bottom: 8px;
 
     }
     &__total{
-        }
+      @media screen and (max-width: 768px) {
+display: none;      }        }
     &__counter {
-        margin-left: -240px;
       width: 120px;
       height: 48px;
       background-color: #fff;
@@ -161,7 +190,7 @@ margin-bottom: 8px;
       justify-content: space-between;
       align-items: center;
       @media screen and (max-width: 768px) {
-        width: 100%;
+      display: none;
       }
       &-button {
         border: none;
@@ -176,7 +205,18 @@ margin-bottom: 8px;
         }
       }
     }
-  
+    &__mobile-counter{
+        display: none;
+        @media screen and (max-width: 768px) {
+      display: block;
+      width: 120px;
+      height: 48px;
+      background-color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      }
+      }
   }
 
 </style>

@@ -9,7 +9,7 @@
             <router-link class="footer-columns__link" to="/">Best sellers</router-link>
             <router-link class="footer-columns__link" to="/">Recently viewed</router-link>
             <router-link class="footer-columns__link" to="/">Popular this week</router-link>
-            <router-link class="footer-columns__link" to="/">All products</router-link>
+            <router-link class="footer-columns__link" to="/collection">All products</router-link>
 
           </div>
           <div class="footer-columns__column">
@@ -27,7 +27,7 @@
             <router-link class="footer-columns__link" to="/">About us</router-link>
             <router-link class="footer-columns__link" to="/">Vacancies</router-link>
             <router-link class="footer-columns__link" to="/">Contact us</router-link>
-            <router-link class="footer-columns__link" to="/">Privacy</router-link>
+            <router-link class="footer-columns__link" to="/about">Privacy</router-link>
             <router-link class="footer-columns__link" to="/">Returns policy</router-link>
 
           </div>

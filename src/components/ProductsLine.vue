@@ -1,9 +1,10 @@
 <template>
   <div class="products-container">
-      <div v-show="showLikeText" class="products-container-text">You might also like</div>
+    <div v-show="showLikeText" class="products-container-text">
+      You might also like
+    </div>
 
     <div class="products">
-
       <Product
         v-for="product of products"
         :key="product.id"
@@ -13,22 +14,36 @@
         :id="product.id"
       ></Product>
     </div>
-    <Button mobileWidth="true" class="products-btn"></Button>
+    <Button path="/products" mobileWidth="true" class="products-btn"></Button>
   </div>
 </template>
 
 <script setup>
+import { onMounted, ref } from "vue";
+import { useProductsStore } from "../store/store";
 import Product from "./Product.vue";
 import Button from "./Button.vue";
-import { useProductsStore } from "../store/store";
 const props = defineProps({
-  showLikeText:{
-    type:String,
-    default:false
+  showLikeText: {
+    type: String,
+    default: false,
   },
-})
-const store = useProductsStore()
-const products = store.products 
+});
+const store = useProductsStore();
+
+const products = ref({});
+function getFourProducts(obj) {
+  let count = 0;
+  for (let product in obj) {
+    if (count < 4) {
+      products.value[product] = obj[product];
+      count++;
+    } else {
+      break;
+    }
+  }
+}
+onMounted(()=>getFourProducts(store.products))
 </script>
 
 <style lang="scss" scoped>
@@ -45,9 +60,9 @@ const products = store.products
     @media screen and (max-width: 768px) {
       padding: 0 24px;
     }
-    &-text{
+    &-text {
       font-size: 32px;
-      color:var(--primary);
+      color: var(--primary);
       font-family: var(--clash);
       margin-top: 67px;
       margin-bottom: 33px;

@@ -63,24 +63,24 @@ const store = useProductsStore()
 const cart = store.cart
 const menu = [
   {
-    name:'Plant pots',
-    path:'/plant'
+    name:'About us',
+    path:'/about'
   },
   {
-    name:'Ceramics',
-    path:'/ceramics'
+    name:'All products',
+    path:'/collection'
   },
   {
-    name:'Tables',
-    path:'/tables'
+    name:'Lamps',
+    path:'/lamps'
   },
   {
     name:'Chairs',
     path:'/chairs'
   },
   {
-    name:'Crockery',
-    path:'/crockery'
+    name:'Vases',
+    path:'/vases'
   },
   {
     name:'Tableware',
