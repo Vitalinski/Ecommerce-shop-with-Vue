@@ -1,7 +1,7 @@
 <template>
 <div class="ideas">
  
-      <InformationBlock class="information-block" :title="title" :description="description" :link="link"
+      <InformationBlock class="information-block" :title="title" :description="description" 
        btnBackground="#F9F9F926" background="var(--primary)
 " btnColor="white"
        colorTitle="white"  colorDescription="white"></InformationBlock>
@@ -21,7 +21,6 @@ data(){
     return{
  title : 'It started with a small idea',
  description : 'A global brand with local beginnings, our story begain in a small studio in South London in early 2014',
-link : '',
     }
 }
 }
@@ -34,7 +33,7 @@ link : '',
     column-gap: 16px;
     padding: 0 80px;
     margin-bottom: 60px;
-@media screen and (max-width:668px){
+@media screen and (max-width:678px){
     grid-template-columns: repeat(1,1fr);
     padding: 0 24px;
 

@@ -9,7 +9,7 @@
             <router-link class="footer-columns__link" to="/">Best sellers</router-link>
             <router-link class="footer-columns__link" to="/">Recently viewed</router-link>
             <router-link class="footer-columns__link" to="/">Popular this week</router-link>
-            <router-link class="footer-columns__link" to="/collection">All products</router-link>
+            <router-link class="footer-columns__link" to="/products">All products</router-link>
 
           </div>
           <div class="footer-columns__column">
@@ -24,10 +24,10 @@
           </div>
           <div class="footer-columns__column">
             <span class="footer-columns__title">Our company</span>
-            <router-link class="footer-columns__link" to="/">About us</router-link>
+            <router-link class="footer-columns__link" to="/about">About us</router-link>
             <router-link class="footer-columns__link" to="/">Vacancies</router-link>
             <router-link class="footer-columns__link" to="/">Contact us</router-link>
-            <router-link class="footer-columns__link" to="/about">Privacy</router-link>
+            <router-link class="footer-columns__link" to="/">Privacy</router-link>
             <router-link class="footer-columns__link" to="/">Returns policy</router-link>
 
           </div>
@@ -38,7 +38,7 @@
         </div>
       </div>
       <div class="footer-social">
-        <span class="footer-social-copyright">Copyright 2022 Avion LTD</span>
+        <span class="footer-social-copyright">Copyright 2023 Avion LTD</span>
         <div class="footer-social-logos">
           <a href="#" class="footer-social-logos__link">
             <img src="/svg/logo-facebook.svg" alt="Meta">

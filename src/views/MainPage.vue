@@ -1,11 +1,9 @@
 <template>
-    <div class="container">
   <CoverImage></CoverImage>
   <AboutBrand></AboutBrand>
   <ProductsLine></ProductsLine>
   <Ideas></Ideas>
   <subscribe></subscribe>
-  </div>
   </template>
   
   <script setup>

@@ -129,6 +129,8 @@ const filter =[
 .content {
   display: grid;
   grid-template-columns: 30% 1fr;
+  @media screen and (max-width: 768px) {
+display: block;      }
   &-filter {
     padding: 48px 0 0 80px;
     &__title{
@@ -151,5 +153,9 @@ margin-bottom: 12px;
     }
 
   }
+}
+sidebar{
+  @media screen and (max-width: 768px) {
+display: none;      }
 }
 </style>

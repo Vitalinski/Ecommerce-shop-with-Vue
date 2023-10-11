@@ -1,8 +1,9 @@
 import { createRouter, createWebHistory } from "vue-router";
 import MainPage from '@/views/MainPage.vue'
 import ProductPage from'@/views/ProductPage.vue'
-import ShoppingCart from'@/views/ShoppingCart.vue'
-import AllProducts from '@/views/AllProducts.vue'
+import ShoppingCartPage from'@/views/ShoppingCartPage.vue'
+import AllProductsPage from '@/views/AllProductsPage.vue'
+import AboutUsPage from '@/views/AboutUsPage.vue'
 const router= createRouter({
     history: createWebHistory(),
     routes:[
@@ -18,14 +19,19 @@ component:MainPage
             },
             {
               path:'/cart',
-              name:'ShoppingCart',
-              component:ShoppingCart
+              name:'ShoppingCartPage',
+              component:ShoppingCartPage
                   },
                   {
                     path:'/products',
-                    name:'AllProducts',
-                    component:AllProducts
+                    name:'AllProductsPage',
+                    component:AllProductsPage
                         },
+                        {
+                          path:'/about',
+                          name:'AboutUsPage',
+                          component:AboutUsPage
+                              },
 ],
 
   

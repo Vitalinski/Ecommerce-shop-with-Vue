@@ -75,8 +75,13 @@ props:{
     font-size: 32px;
     line-height: 1.5;
     margin: 0 0 20px 0;
+    @media screen and (max-width: 1024px) {
+      font-size: 24px; 
+   }
 }
 &__description{
+    display: block;
+         margin-bottom: 32px;   
     @media screen and (max-width: 768px) {
         display: block;
          margin-bottom: 32px;   

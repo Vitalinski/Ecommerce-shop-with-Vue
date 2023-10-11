@@ -1,6 +1,6 @@
 <template>
   <div class="cover-image">
-    <InformationBlock :title="title" :description="description" :link="link"></InformationBlock>
+    <InformationBlock  :title="title" :description="description" :link="link"></InformationBlock>
 </div>
 <img class="mobile-image" src="/img/hero.jpg" alt="Image">
 
