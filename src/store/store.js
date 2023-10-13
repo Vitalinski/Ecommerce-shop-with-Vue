@@ -102,12 +102,21 @@ state:()=>({
           cartDescription: 'A timeless design, crafted with attention to detail.'
         },
     },
+
 cart:{
 
 },
 subtotal:0,
+isLoginActive:false,
+
 }),
 actions:{
+  hideOverlay(){
+    this.isLoginActive=false
+  }, 
+  showOverlay(){
+    this.isLoginActive=true
+  },
   addToCart(product, quantity){
 
 this.cart[product.id]= product

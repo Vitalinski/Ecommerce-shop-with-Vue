@@ -43,6 +43,8 @@ default:''
         padding: 16px 32px;
         &:hover{
             outline: 1px solid grey;
+            opacity: 0.8;
+
         }
       
     }

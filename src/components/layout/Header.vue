@@ -2,7 +2,7 @@
   <header class="header">
     <div class="header-top">
       <div class="header-top-search">
-        <img @click="showSearch()" src="/svg/header-search.svg" alt="Search" />
+        <img @click="showSearch" src="/svg/header-search.svg" alt="Search" />
         <input
           class="header-top-search__input"
           :style="{ display: inputDisplay }"
@@ -14,7 +14,7 @@
       </div>
       <div class="header-top-mobile">
         <div class="header-top-mobile__search">
-          <img @click="showSearch()" src="/svg/header-search.svg" alt="Search" />
+          <img @click="showSearch" src="/svg/header-search.svg" alt="Search" />
           <input
             class="header-top-search__input"
             :style="{ display: inputDisplay }"
@@ -34,9 +34,7 @@
           </router-link>
         </div>
         <div class="header-top-mobile__user">
-          <router-link to="/">
-            <img src="/svg/header-user--avatar.svg" alt="Shopping cart" />
-          </router-link>
+            <img @click="store.showOverlay" src="/svg/header-user--avatar.svg" alt="Shopping cart" />
         </div>
         <div class="header-top-mobile__menu" @click="openMenu = !openMenu">
           <img src="/svg/menu.svg" alt="Menu" />
@@ -58,9 +56,7 @@
           </router-link>
         </div>
         <div class="header-top-right__user">
-          <router-link to="/">
-            <img src="/svg/header-user--avatar.svg" alt="Shopping cart" />
-          </router-link>
+            <img @click="store.showOverlay" src="/svg/header-user--avatar.svg" alt="Shopping cart" />
         </div>
       </div>
     </div>

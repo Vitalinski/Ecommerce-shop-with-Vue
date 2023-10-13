@@ -1,6 +1,7 @@
 <template>
 <div class="container">
   <Header></Header>  
+  <OverlayLoginForm></OverlayLoginForm>
   <router-view></router-view>
   <Footer></Footer>
 
@@ -8,6 +9,7 @@
 </template>
 
 <script setup>
+import OverlayLoginForm from './components/OverlayLoginForm.vue';
 import Header from './components/layout/Header.vue';
 import Footer from './components/layout/Footer.vue';
 </script>

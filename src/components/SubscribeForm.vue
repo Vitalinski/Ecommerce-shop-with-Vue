@@ -1,12 +1,14 @@
 <template>
   <form class="subscribe-form">
     <input :style="{background: inputBackground, color:inputColor,}" class="subscribe-form__input" type="text" placeholder="your@email.com">
-    <Button text="Sign up" :color=btnColor :background=btnBackground ></Button>
+    <Button text="Sign up" @click="store.showOverlay"  :color=btnColor :background=btnBackground ></Button>
 </form>
 </template>
 
 <script setup>
 import Button from './Button.vue';
+import { useProductsStore } from '../store/store';
+const store = useProductsStore()
 const props = defineProps({
     inputBackground:{
 type:String,
